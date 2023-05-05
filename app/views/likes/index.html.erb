@@ -16,19 +16,19 @@
 
     <form action="/insert_like" method="post">
       <div>
-        <label for="photo_id_box">
-          Photo
-        </label>
-
-        <input type="text" id="photo_id_box" name="query_photo_id">
-      </div>
-
-      <div>
         <label for="fan_id_box">
           Fan
         </label>
 
         <input type="text" id="fan_id_box" name="query_fan_id">
+      </div>
+
+      <div>
+        <label for="photo_id_box">
+          Photo
+        </label>
+
+        <input type="text" id="photo_id_box" name="query_photo_id">
       </div>
 
       <button>
@@ -48,11 +48,11 @@
         </th>
 
         <th>
-          Photo
+          Fan
         </th>
 
         <th>
-          Fan
+          Photo
         </th>
 
         <th>
@@ -74,11 +74,11 @@
         </td>
 
         <td>
-          <%= a_like.photo_id %>
+          <%= a_like.fan_id %>
         </td>
 
         <td>
-          <%= a_like.fan_id %>
+          <%= a_like.photo_id %>
         </td>
 
         <td>

@@ -29,7 +29,7 @@ class UserAuthenticationController < ApplicationController
   def destroy_cookies
     reset_session
 
-    redirect_to("/", { :notice => "Signed out successfully." })
+    redirect_to("/user_sign_in", { :notice => "Signed out successfully." })
   end
 
   def sign_up_form
@@ -42,8 +42,8 @@ class UserAuthenticationController < ApplicationController
     @user.password = params.fetch("query_password")
     @user.password_confirmation = params.fetch("query_password_confirmation")
     @user.username = params.fetch("query_username")
-    @user.likes_count = params.fetch("query_likes_count")
-    @user.comments_count = params.fetch("query_comments_count")
+    # @user.likes_count = params.fetch("query_likes_count")
+    # @user.comments_count = params.fetch("query_comments_count")
     @user.private = params.fetch("query_private", false)
 
     save_status = @user.save
